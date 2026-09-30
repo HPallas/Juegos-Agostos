@@ -24,9 +24,9 @@ Juegos Agosto es una tienda de videojuegos donde los jugadores podran ir mas all
 (Indicar qué páginas HTML habéis creado además del index.html)
 
 - index.html
-- 
-- 
-- 
+- about.html
+- contactos.html
+- terminosycondiciones
 
 ---
 
@@ -53,7 +53,7 @@ Juegos Agosto es una tienda de videojuegos donde los jugadores podran ir mas all
 
 ## 🚀 Versión del proyecto
 
-Versión: **v0.0.0**
+Versión: **v1.0.0**
 
 ---
 
