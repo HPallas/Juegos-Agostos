@@ -105,4 +105,19 @@ img {
 /* --- Página: xxxxxx.html --- */
 
 
-/* --- Página:  xxxxxx.html --- */
+/* --- Página:  terminosycondiciones.html --- */
+
+
+
+.contenedor {
+   max-width: 900px;
+   margin: 40px auto;
+   padding: 40px;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+ .actualizar {
+            color: #777;
+            font-size: 14px;
+        }
