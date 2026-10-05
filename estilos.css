@@ -111,6 +111,13 @@ img {
    max-width: 300px;
 }
 
+.botonIndex{
+  
+    background-color:rgb(253, 212, 157);
+    
+   
+}
+
 
 
 /* --- Página: terminosycondiciones.html --- */
@@ -295,3 +302,4 @@ body > div h1 {
     border: 2px solid #f5d000;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
+
