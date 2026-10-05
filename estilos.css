@@ -59,7 +59,8 @@ li {
 
 
 a {
-   color: #2563eb;
+   color: #eb790e;
+   padding: 30px;
 }
 
 
@@ -97,6 +98,11 @@ a {
 } 
 
 td {
+   border-style: solid;
+   border-width: 2px;
+}
+
+.fotoIndex {
    border-style: solid;
    border-width: 2px;
 }
