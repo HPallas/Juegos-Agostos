@@ -118,6 +118,79 @@ img {
 
 
 
-/* --- Página:  xxxxxx.html --- */
+/* --- Página:  contactos.html --- */
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   width: 400px;
+   max-width: 90vw;
+   padding: 25px;
+   border: 2px solid #222;
+   border-radius: 12px;
+   background-color: antiquewhite;
+   box-sizing: border-box;
+}
 
+form label {
+   font-weight: bold;
+   color: #444;
+}
+
+form input,
+form textarea {
+   font-family: 'Comic Sans MS', sans-serif;
+   font-size: 1em;
+   padding: 8px;
+   border: 1px solid #999;
+   border-radius: 6px;
+   background-color: #fff;
+   box-sizing: border-box;
+}
+
+form textarea {
+   min-height: 120px;
+   resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+   outline: none;
+   border-color: #2563eb;
+}
+
+form button {
+   margin-top: 10px;
+   padding: 10px;
+   font-family: 'Comic Sans MS', sans-serif;
+   font-size: 1em;
+   font-weight: bold;
+   color: #222;
+   background-color: #f5d6a0;
+   border: 2px solid #222;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+form button:hover {
+   background-color: #eac27d;
+}
+
+body > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   margin-top: 30px;
+}
+
+body > div img {
+   width: 100px;
+   height: 100px;
+   margin-bottom: 10px;
+}
+
+body > div h1 {
+   margin-top: 0;
+}
 /* --- Página:  about.html --- */
