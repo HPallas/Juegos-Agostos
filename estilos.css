@@ -59,7 +59,8 @@ li {
 
 
 a {
-   color: #2563eb;
+   color: #eb790e;
+   padding: 30px;
 }
 
 
@@ -89,11 +90,16 @@ a {
    font-size: 1.5em;
    border-radius: 12px;
 
-   background-color:antiquewhite;
+   background-color:rgb(253, 212, 157);
 }
 
 .centro {
    text-align: center;
+}
+
+.fotoIndex {
+   border-style: solid;
+   border-width: 2px;
 }
 
 img {
