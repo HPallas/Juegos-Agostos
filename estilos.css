@@ -295,3 +295,48 @@ body > div h1 {
     border: 2px solid #f5d000;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
+
+/* --- Página:  producto-minecraft.html --- */
+
+/* --- Página: producto-minecraft.html --- */
+.producto {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+   padding: 20px 20px 120px;
+   box-sizing: border-box;
+}
+
+.producto img {
+   width: 500px;
+   max-width: 100%;
+   border: 2px solid #222;
+   border-radius: 12px;
+}
+
+.producto-precio {
+   font-size: 1.8em;
+   font-weight: bold;
+   margin: 10px 0;
+}
+
+.producto-detalles {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+.producto-detalles th {
+   text-align: left;
+   padding: 8px 12px;
+   background-color: rgb(253, 212, 157);
+   border: 2px solid #222;
+}
+
+.producto-detalles td {
+   padding: 8px 12px;
+   text-align: left;
+}
