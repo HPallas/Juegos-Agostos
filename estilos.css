@@ -502,3 +502,24 @@ body > div h1 {
    padding: 8px 12px;
    text-align: left;
 }
+.btn-comprar {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color:  rgb(253, 212, 157);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  background-color:  rgb(253, 212, 157);
+}
+
+.btn-comprar.comprado {
+  background-color: #777;
+  cursor: default;
+}
