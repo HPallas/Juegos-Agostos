@@ -98,8 +98,7 @@ a {
 } 
 
 td {
-   border-style: solid;
-   border-width: 2px;
+   padding: 20px;
 }
 
 .fotoIndex {
@@ -109,6 +108,13 @@ td {
 
 img {
    max-width: 300px;
+}
+
+.botonIndex{
+  
+    background-color:rgb(253, 212, 157);
+    
+   
 }
 
 
@@ -126,6 +132,10 @@ img {
             color: #777;
             font-size: 14px;
         }
+
+.lecturaFacil {
+   background-color: rgb(221, 186, 121);
+}
 
 
 
@@ -298,7 +308,6 @@ body > div h1 {
 
 /* --- Página:  producto-minecraft.html --- */
 
-/* --- Página: producto-minecraft.html --- */
 .producto {
    display: flex;
    flex-direction: column;
