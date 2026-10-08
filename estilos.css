@@ -367,6 +367,7 @@ body > div h1 {
 @media (max-width: 700px) {
    .modal-caja { grid-template-columns: 1fr; }
    .modal-caja img { max-height: 40vh; }
+}
 /* --- Página:  producto-minecraft.html --- */
 
 .producto {
