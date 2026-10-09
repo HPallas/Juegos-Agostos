@@ -130,7 +130,7 @@ Juegos Agosto es una tienda de videojuegos donde los jugadores podran ir mas all
 
 ## 🚀 Versión del proyecto
 
-Versión: **v2.0.0**
+Versión: **v2.0.1**
 
 ---
 
