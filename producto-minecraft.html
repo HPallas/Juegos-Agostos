@@ -66,6 +66,8 @@
         </tr>
       </table>
 
+       <button id="btn-comprar" class="btn-comprar" type="button">Comprar</button>
+
       <p><a href="index.html">&larr; Volver al inicio</a></p>
     </section>
   </main>
@@ -76,5 +78,14 @@
     </div>
     <p>V1.0.0</p>
   </footer>
+    <script>
+    const boton = document.getElementById("btn-comprar");
+
+    boton.addEventListener("click", function () {
+      boton.textContent = "Comprado";
+      boton.disabled = true;
+      boton.classList.add("comprado");
+    });
+  </script>
 </body>
 </html>
