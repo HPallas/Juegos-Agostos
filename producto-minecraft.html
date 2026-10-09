@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="version" content="1.0.0">
+  <title>Minecraft - Juegos Agosto</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="head">
+    <div class="header-contenido">
+      <h1 class="logo">JUEGOS AGOSTO</h1>
+      <nav>
+        <table>
+          <tr>
+            <td><a href="index.html"> Inicio </a></td>
+            <td><a href="ofertas.html"> Ofertas </a></td>
+            <td><a href="contactos.html"> Contacto </a></td>
+            <td><a href="terminosycondiciones.html"> Términos y cond. </a></td>
+            <td><a href="about.html"> About </a></td>
+          </tr>
+        </table>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="producto">
+      <h2 class="centro">MINECRAFT</h2>
+
+      <img src="img/minecraft_logo.jpg" alt="Portada de Minecraft">
+
+      <p class="producto-precio">25,00€</p>
+
+    
+
+      <h3>Descripción</h3>
+      <p>
+        Minecraft es un juego de construcción y supervivencia en un mundo de bloques infinito.
+        Explora, recolecta recursos, fabrica herramientas y construye lo que imagines,
+        solo o con amigos.
+      </p>
+
+      <h3>Detalles</h3>
+      <table class="producto-detalles">
+        <tr>
+          <th>Desarrollador</th>
+          <td>Mojang Studios</td>
+        </tr>
+        <tr>
+          <th>Género</th>
+          <td>Sandbox / Supervivencia</td>
+        </tr>
+        <tr>
+          <th>Plataformas</th>
+          <td>PC, PlayStation, Xbox, Switch</td>
+        </tr>
+        <tr>
+          <th>Jugadores</th>
+          <td>1 o más (online)</td>
+        </tr>
+        <tr>
+          <th>Idioma</th>
+          <td>Español</td>
+        </tr>
+      </table>
+
+       <button id="btn-comprar" class="btn-comprar" type="button">Comprar</button>
+
+      <p><a href="index.html">&larr; Volver al inicio</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contenido">
+      <p>&copy; 2026 JuegosAgosto &mdash; Desarrollado por Héctor Pallas, Franco Raguza, Pablo Santos, Iria Sánches y Daniel Vázquez</p>
+    </div>
+    <p>V1.0.0</p>
+  </footer>
+    <script>
+    const boton = document.getElementById("btn-comprar");
+
+    boton.addEventListener("click", function () {
+      boton.textContent = "Comprado";
+      boton.disabled = true;
+      boton.classList.add("comprado");
+    });
+  </script>
+</body>
+</html>

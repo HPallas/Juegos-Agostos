@@ -8,25 +8,23 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <!-- ============================================================
-       CABECERA Y MENÚ DE NAVEGACIÓN
-       - El menú debe enlazar a todas las páginas del proyecto
-       - Cada miembro del equipo añadirá su página aquí
-       ============================================================ -->
   <header class="head">
     <div class="header-contenido">
       <h1 class="logo">JUEGOS AGOSTO</h1>
       <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <!-- AÑADIR AQUÍ los enlaces a las páginas del equipo -->
-          <!-- Ejemplo: <li><a href="about.html">Sobre nosotros</a></li> -->
-          <!-- Ejemplo: <li><a href="contacto.html">Contacto</a></li>  -->
-        </ul>
+        <table>
+          <tr>
+            <td><a href="index.html"> Inicio </a></td>
+            <td><a href="ofertas.html"> Ofertas </a></td>
+            <td><a href="contactos.html"> Contacto </a></td>
+            <td><a href="terminosycondiciones.html"> Términos y cond. </a></td>
+            <td><a href="about.html"> About </a></td>
+          </tr>
+        </table>
       </nav>
     </div>
   </header>
-  <main clas="main">
+  <main class="main">
     <!-- Sección de bienvenida -->
     <section class="bienvenida">
       <h2 class="centro">PÁGINA DE INICIO</h2>
@@ -37,12 +35,12 @@
         <tr>
           <th class="bloque">RESIDEN EVIL: RE</th>
           <th class="bloque">TOMODACHI LIFE 2</th>
-          <th class="bloque">MINECRAFT</th>
+          <th class="bloque"><a href="producto-minecraft.html">MINECRAFT</a></th>
         </tr>
         <tr>
-          <td><img  src="RE_Req.jpg"/></td>
-          <td><img  src="tomodachi.jpg"/></td>
-          <td><img  src="minecraft_logo.jpg"/></td>
+          <td class="fotoIndex"><img data-juego="re" src="img/RE_Req.jpg" alt="Resident Evil"/></td>
+          <td class="fotoIndex"><img data-juego="tomodachi" src="img/tomodachi.jpg" alt="Tomodachi Life 2"/></td>
+          <td class="fotoIndex"><img data-juego="minecraft" src="img/minecraft_logo.jpg" alt="Minecraft"/></td>
         </tr>
         <tr>
           <td>64,98€</td>
@@ -53,6 +51,7 @@
       <p>
         Hemos creado la mejor tienda de juegos online que te puedes imaginar.
       </p>
+       <button class="botonIndex"><a href="ofertas.html">Ver ofertas</a></button> 
     </section>
 
     <section class="tarjetas">
@@ -61,15 +60,93 @@
 
   </main>
 
-  <!-- ============================================================
-       PIE DE PÁGINA
-       - Información de contacto, créditos y enlaces secundarios
-       ============================================================ -->
+  <div class="modal-fondo" id="modalJuego" aria-hidden="true">
+    <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+      <button class="modal-cerrar" id="modalCerrar" aria-label="Cerrar">&times;</button>
+      <img id="modalImagen" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modalTitulo"></h3>
+        <p class="precio" id="modalPrecio"></p>
+        <p id="modalDescripcion"></p>
+        <ul id="modalDetalles"></ul>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-contenido">
       <p>&copy; 2026 JuegosAgosto &mdash; Desarrollado por Héctor Pallas, Franco Raguza, Pablo Santos, Iria Sánches y Daniel Vázquez</p>
     </div>
     <p>V1.0.0</p>
   </footer>
+
+  <script>
+    const JUEGOS = {
+      re: {
+        titulo: "Resident Evil: Requiem",
+        precio: "64,98€",
+        descripcion: "Nueva entrega de la saga de survival horror de Capcom, con tensión, exploración y combates en entornos cargados de atmósfera.",
+        detalles: ["Género: Survival horror", "Desarrolladora: Capcom", "Plataformas: PC, PS5, Xbox Series X|S", "Jugadores: 1"]
+      },
+      tomodachi: {
+        titulo: "Tomodachi Life 2",
+        precio: "54,99€",
+        descripcion: "Un simulador social lleno de humor en el que creas Miis, los haces convivir en una isla y ves qué situaciones surgen entre ellos.",
+        detalles: ["Género: Simulación social", "Desarrolladora: Nintendo", "Plataformas: Nintendo Switch", "Jugadores: 1"]
+      },
+      minecraft: {
+        titulo: "Minecraft",
+        precio: "25,00€",
+        descripcion: "Explora mundos infinitos generados al azar, construye desde refugios hasta grandes ciudades y sobrevive o crea en libertad.",
+        detalles: ["Género: Sandbox / supervivencia", "Desarrolladora: Mojang Studios", "Plataformas: PC, consolas y móvil", "Jugadores: 1 o multijugador"]
+      }
+    };
+
+    const modal = document.getElementById("modalJuego");
+    const elImagen = document.getElementById("modalImagen");
+    const elTitulo = document.getElementById("modalTitulo");
+    const elPrecio = document.getElementById("modalPrecio");
+    const elDescripcion = document.getElementById("modalDescripcion");
+    const elDetalles = document.getElementById("modalDetalles");
+    const botonCerrar = document.getElementById("modalCerrar");
+
+    function abrirModal(id, imgOrigen) {
+      const juego = JUEGOS[id];
+      if (!juego) return;
+
+      elImagen.src = imgOrigen.src;
+      elImagen.alt = juego.titulo;
+      elTitulo.textContent = juego.titulo;
+      elPrecio.textContent = juego.precio;
+      elDescripcion.textContent = juego.descripcion;
+      elDetalles.innerHTML = "";
+      juego.detalles.forEach(d => {
+        const li = document.createElement("li");
+        li.textContent = d;
+        elDetalles.appendChild(li);
+      });
+
+      modal.classList.add("abierto");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      botonCerrar.focus();
+    }
+
+    function cerrarModal() {
+      modal.classList.remove("abierto");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    // Clic en cada foto
+    document.querySelectorAll(".fotoIndex img[data-juego]").forEach(img => {
+      img.addEventListener("click", () => abrirModal(img.dataset.juego, img));
+    });
+
+    // Cerrar: botón X, clic fuera de la caja, o tecla Esc
+    botonCerrar.addEventListener("click", cerrarModal);
+    modal.addEventListener("click", e => { if (e.target === modal) cerrarModal(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarModal(); });
+  </script>
 </body>
 </html>
